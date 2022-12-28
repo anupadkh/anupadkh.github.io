@@ -1,9 +1,28 @@
 nav{
     padding:10px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: beige;
 }
-.menu > ul > li{
+nav li{
     list-style: none;
     display:inline;
-    float:right;
     margin-left: 10px;
+}
+nav .logo{
+    flex-grow:1;
+}
+.logo>img{
+    width: 4em;
+}
+nav .menu{
+    flex-grow: 3;
+}
+
+nav .social{
+    flex-grow: 1;
+}
+.dark{
+    display: none;
 }
