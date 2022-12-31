@@ -10,7 +10,12 @@ nav{
     flex-direction: row;
     align-items: center;
     background-color: beige;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+main header footer{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 nav li{
     list-style: none;
     display:inline;
@@ -37,13 +42,18 @@ main{
     display: flex;
     flex-direction: column;
     padding:20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: gainsboro;
 }
 
 img{
-    width:80%;
+    object-fit: cover;
+    width:100%;
+    height: 300px;
     border-radius: 3em;
     margin-left: auto;
     margin-right: auto;
+    /* transform: translateY(-50%); */
     /* margin:3em; */
 
 }
@@ -66,6 +76,8 @@ img{
     display: inline-block;
     /* width:30%; */
     flex-basis: 50%;
+    /* padding: 20px; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .title{
@@ -73,5 +85,104 @@ img{
     margin-right: auto;
     text-align: center;
     font: 600;
-    font-family: "Sofia";
+    font-size: 1.5em;
+    display:block;
+    width:100%;
+    text-transform: capitalize;
+}
+
+.sub-title{
+    font-size: 1 em;
+}
+
+.desc{
+    font-size:.8em;
+}
+
+.copy::before{
+    /* content: '\169'; */
+    font: var(--fa-font-solid);
+    content: '\f2c1';
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -10px;
+  }
+  
+  .gallery-item {
+    width: 30%;
+    margin: 0 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .front{
+    position: relative;
+  }
+
+
+  .gallery-item .caption, .front .desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+  }
+
+    .gallery-item:hover .caption, .front:hover .desc {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.5s;
+    }
+
+
+  .slider {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+  }
+  
+  .slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s;
+  }
+  
+  .slider img.current {
+    transform: scale(1.2);
+    z-index: 1;
+  }
+  
+  .slider img.prev {
+    transform: translateX(-100%);
+  }
+  
+  .slider img.next {
+    transform: translateX(100%);
+  }
+.logo img{
+    height:100%;
+}
+
+footer{
+    background-color: honeydew;
+    padding:2em 0em;
 }
