@@ -192,7 +192,7 @@ img{
     transition: visibility 0s, opacity 0.5s;
   }
 
-    .gallery-item:hover .caption, .front:hover .desc {
+    .gallery-item:hover .caption, .front .desc {
         visibility: visible;
         opacity: 1;
         transition: visibility 0s, opacity 0.5s;
