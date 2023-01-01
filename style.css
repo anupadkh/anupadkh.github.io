@@ -74,11 +74,51 @@ img{
 
 .cards > .card{
     display: inline-block;
-    /* width:30%; */
     flex-basis: 50%;
-    /* padding: 20px; */
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    perspective: 1000px;
+    position: relative;
+    /* padding:0 .5em; */
 }
+
+.card .front,
+.card .back {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.card .front {
+    z-index: 2;
+  }
+  
+  .card .back {
+    transform: rotateY(180deg);
+    translate: 0 -100%;
+  }
+  
+  
+  
+  
+  .card:hover .front {
+    transform: rotateY(180deg);
+  }
+  
+  .card:hover .back {
+    transform: rotateY(0);
+  }
+  /* The .card class sets the perspective property to 1000px, which creates a 3D space for the card to rotate in. The position is set to relative, and the width and height are set to 200px and 300px, respectively.
+  The .card .front and .card .back classes set the position to absolute, the top and left properties to 0, and the width and height to 100%. The backface-visibility property is set to hidden, which ensures that the back face of the card is not visible when it is flipped. The transition property adds a smooth transition effect when the card is flipped.
+  The .card .front class has a z-index of 2, which ensures that it is displayed on top of the back face of the card. The .card .back class has a transform property that rotates it 180 degrees around the Y axis, which positions it behind the front face of the card.
+  The .card:hover .front and .card:hover .back classes override the transform property for the front and back faces of the card when the mouse hovers over the card. The .card:hover .front class rotates the front face 180 degrees around the Y axis, which flips it over to reveal the back face. The .card:hover .back class rotates the back face 0 degrees around the Y axis, which brings it back into view.
+  This is just a basic example, and you can customize the layout and styling to suit your specific needs. You can also use JavaScript to trigger the flip transition or add additional effects such as a delay or easing function.
+  
+  
+   */
+  
 
 .title{
     margin-left: auto;
@@ -114,7 +154,7 @@ img{
   
   .gallery-item {
     width: 30%;
-    margin: 0 10px;
+    margin:  2em auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
   }
@@ -127,10 +167,19 @@ img{
 
   .front{
     position: relative;
+    padding: 1em;
+  }
+
+  .front .desc{
+    text-align: center;
+    margin:-.5em 2em;
+    background-color: bisque;
+    box-shadow: 0 2px 4px aqua;
+    border-radius: 3em;
   }
 
 
-  .gallery-item .caption, .front .desc {
+ .gallery-item .caption/*, .front .desc */{ 
     position: absolute;
     bottom: 0;
     left: 0;
@@ -185,4 +234,17 @@ img{
 footer{
     background-color: honeydew;
     padding:2em 0em;
+}
+
+.button{
+    position: absolute;
+    background-color: #00b0ff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    /* display: inline-block; */
+    float:right;
+    margin: 10px;
+    box-shadow: 4px 5px 4px rgb(194 50 50 / 88%);
 }
