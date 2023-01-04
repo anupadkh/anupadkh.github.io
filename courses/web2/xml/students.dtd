@@ -1,0 +1,11 @@
+<!ENTITY studentsList(student+) >
+<!ENTITY student(firstname, lastName, certificate, scores, (phoneNumber)* | (mobileNumber)* )>
+<!ATTLIST student id #CDATA #REQUIRED>
+<!ATTLIST certificate origin #CDATA #REQUIRED>
+<!ENTITY firstname #PCDATA>
+<!ENTITY lastName #PCDATA>
+<!ENTITY certificate #PCDATA>
+<!ENTITY scores (module1, module12, module3)>
+<!ENTITY module1 #PCDATA>
+<!ENTITY module12 #PCDATA>
+<!ENTITY module3 #PCDATA>
