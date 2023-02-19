@@ -1,0 +1,35 @@
+[
+    {
+        "title": "Web Application I",
+        "school": "GUBIT",
+        "semester": 2,
+        "creditHours": 3,
+        "reqdCourses": [],
+        "code": "CIT106",
+        "image": "images/courses/web-design.jpg"
+    },
+    {
+        "title": "Web Application II",
+        "school": "GUBIT",
+        "semester": 3,
+        "creditHours": 3,
+        "reqdCourses": ["CIT106"],
+        "code": "CIT208"
+    },
+    {
+       "title": "Workshop: Problem Solving and Logic",
+        "school": "GUBIT",
+        "semester": 3,
+        "creditHours": 3,
+        "reqdCourses": [],
+        "code": "CIT203" 
+    },
+    {
+        "title": "Research Methods in Information and Communication Technolgy",
+        "school": "INFOMAX",
+        "semester": 3,
+        "creditHours": 3,
+        "reqdCourses": [],
+        "code": "RMCT-VD1"  
+    }
+]
