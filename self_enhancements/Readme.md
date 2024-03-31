@@ -1,6 +1,6 @@
 # Build My Dreams
 
-## Build Bookbaas.com
+## [Build Bookbaas.com](../projects/bookBaas.md)
 - An app to mobilize travel itenerary for people
 - [Gitlab Project](https://gitlab.com/website145/bookbaas.git)
 
@@ -8,6 +8,7 @@
 - A research degree that collaborates data engineering
 
 ## Get a Job earning of USD 100,000 per year
+- Work on Flexiple Jobs
 
 ## Get a working channel to teach students problem solving techniques
 
